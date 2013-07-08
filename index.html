@@ -1,0 +1,41 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JsMetaSearch</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.3.custom.css">
+        <script language="javascript" type="text/javascript" src="js/libs/jquery-1.9.0/jquery.min.js"></script>
+        <script language="javascript" type="text/javascript" src="js/libs/jqueryui-1.10.0/jquery-ui.min.js"></script>
+        <script language="javascript" type="text/javascript" src="js/libs/openlayer-3/ol3.min.js"></script>
+        <script language="javascript" type="text/javascript" src="js/main.js"></script>
+    </head>
+    <body>
+        <h3>Warning</h3>
+        <p>This is an experimental site to make an example how a simple client-working-meta-search programm can be work</p>
+        <p>The code is very poor, because it was written fast and I'm not good in JS</p>
+        <p>This Site doesn't anonymsize the search reqests!, Google and co. see what you type!</p>
+        <hr/>
+        <div class="search" style="padding:10px;margin-bottom:30px;">
+            <form class="form" onSubmit="searchEvent(this.search.value);
+                    return false">
+                <input class="ui-autocomplete-input" type="text" id="search" size="50" name="query" value="">
+                <input id="search_submit" type="submit" value="Suchen" >
+            </form>
+        </div>
+        <hr/>
+        <div class="search_results">
+            <div class="special_results" id="special_results" style="float: right;width: 550px;padding:10px;">
+            </div>
+            <div class="main_results" id="main_results" style="margin-right: 600px;padding:10px;border-right:2px solid #ccc;">
+            </div>
+        </div>
+
+
+    </body>
+</html>
+
